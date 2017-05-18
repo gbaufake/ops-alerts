@@ -5,16 +5,6 @@ require 'JSON'
 require './test_case'
 
 
-# NOW=$(date +%s000)
-# curl -s -k  \
-#   -H "Hawkular-Tenant: ${HAWKULAR_TENANT}"       \
-#   -H "Authorization: Bearer ${HAWKULAR_TOKEN}" \
-#   -H "Content-Type: application/json" \
-#   -X POST \
-#   -d "[{'timestamp': ${NOW}, 'value': 7}]" \
-#   https://${HAWKULAR_HOST}/hawkular/metrics/gauges/data_x/raw
-
-
 describe "Push Fire Metrics " do
 
   # Starting Request

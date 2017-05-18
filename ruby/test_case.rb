@@ -11,14 +11,23 @@ def initialize(parameters)
   @http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
   case parameters[:http_method]
+
   when 'GET'
     @request = Net::HTTP::Get.new(@url)
     configure_base_request(parameters)
 
   when 'POST'
-      @request = Net::HTTP::Post.new(@url)
-      configure_base_request(parameters)
-      configure_body_request(parameters)
+    @request = Net::HTTP::Post.new(@url)
+    configure_base_request(parameters)
+    configure_body_request(parameters)
+
+  when 'DELETE'
+    @request = Net::HTTP::Delete.new(@url)
+    configure_base_request(parameters)
+
+  when 'PUT'
+    @request = Net::HTTP::Put.new(@url)
+    configure_base_request(parameters)
   end
 end
 
