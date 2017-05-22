@@ -1,7 +1,7 @@
 require 'byebug'
 require 'dotenv'
 require 'to_bool'
-require 'JSON'
+require 'json'
 require './test_case'
 
 
