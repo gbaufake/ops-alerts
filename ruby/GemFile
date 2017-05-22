@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem  'to_bool'
+gem 'to_bool'
 gem 'dotenv'
 gem 'byebug'
 gem 'rspec'
