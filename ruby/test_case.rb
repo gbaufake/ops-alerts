@@ -1,6 +1,6 @@
 require 'uri'
 require 'net/http'
-require 'openSSL'
+require 'openssl'
 
 class TestCase
 def initialize(parameters)
