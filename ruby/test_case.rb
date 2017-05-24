@@ -5,7 +5,7 @@ require 'openssl'
 class TestCase
 def initialize(parameters)
   @name = parameters[:name]
-  @url = URI(parameters[:hawkular_envirorment] + parameters[:hawkular_url])
+  @url = URI(parameters[:hawkular_environment] + parameters[:hawkular_url])
   @http = Net::HTTP.new(@url.host, @url.port)
   @http.use_ssl = parameters[:ssl]
   @http.verify_mode = OpenSSL::SSL::VERIFY_NONE

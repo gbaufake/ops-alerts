@@ -12,7 +12,7 @@ describe "Push Fire Metrics " do
     value = 7
     body = "[{'timestamp': #{Time.now.to_i}, 'value': #{value} }]"
 
-    parameters = {:name =>"Push Fire Metrics", :hawkular_envirorment => ENV['HAWKULAR_ENVIRONMENT'],
+    parameters = {:name =>"Push Fire Metrics", :hawkular_environment=> ENV['HAWKULAR_ENVIRONMENT'],
       :hawkular_url => "hawkular/metrics/gauges/data_x/raw", :ssl=> ENV['HAWKULAR_USE_SSL'].to_bool,
       :http_method=> 'POST', :hawkular_tenant=> ENV['HAWKULAR_TENANT'],
       :content_type => 'application/json',  :authorization => ENV['HAWKULAR_TOKEN'], :no_cache => 'no-cache' , :body => body}
