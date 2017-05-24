@@ -3,7 +3,7 @@ require 'openSSL'
 require 'json'
 require 'dotenv'
 require 'to_bool'
-load './test_case'
+load './test_case.rb'
 
 describe "Pushing Triggers " do
   # Starting the resquest

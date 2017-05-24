@@ -12,7 +12,7 @@ require 'byebug'
 require 'dotenv'
 require 'to_bool'
 require 'json'
-load './test_case'
+load './test_case.rb'
 
 
 describe "Push Resolving Metrics " do
