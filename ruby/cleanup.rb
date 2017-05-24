@@ -30,7 +30,7 @@ describe "Cleanup" do
   # Starting Requests
   before(:all) do
     # Triggers
-     triggers_parameters = {:name =>"Cleanup Triggers", :hawkular_envirorment => ENV['HAWKULAR_ENVIRONMENT'],
+     triggers_parameters = {:name =>"Cleanup Triggers", :hawkular_environment => ENV['HAWKULAR_ENVIRONMENT'],
       :hawkular_url => "hawkular/alerts/triggers/ops-example", :ssl=> ENV['HAWKULAR_USE_SSL'].to_bool,
       :http_method=> 'DELETE', :hawkular_tenant=> ENV['HAWKULAR_TENANT'],
       :content_type => 'application/json',  :authorization => ENV['HAWKULAR_TOKEN'], :no_cache => 'no-cache' , :body => ""}
@@ -40,7 +40,7 @@ describe "Cleanup" do
 
     # Alerts
     alerts_tags = "nodename|vm-48-124.eng.lab.tlv.redhat.com"
-    alerts_parameters = {:name =>"Cleanup Alerts", :hawkular_envirorment => ENV['HAWKULAR_ENVIRONMENT'],
+    alerts_parameters = {:name =>"Cleanup Alerts", :hawkular_environment => ENV['HAWKULAR_ENVIRONMENT'],
       :hawkular_url => "hawkular/alerts/delete?tags=#{alerts_tags}", :ssl=> ENV['HAWKULAR_USE_SSL'].to_bool,
       :http_method=> 'PUT', :hawkular_tenant=> ENV['HAWKULAR_TENANT'],
       :content_type => 'application/json',  :authorization => ENV['HAWKULAR_TOKEN'], :no_cache => 'no-cache' , :body => ""}
@@ -49,7 +49,7 @@ describe "Cleanup" do
 
       # Events
       events_tags = "nodename|vm-48-124.eng.lab.tlv.redhat.com"
-      events_parameters = {:name =>"Cleanup Alerts", :hawkular_envirorment => ENV['HAWKULAR_ENVIRONMENT'],
+      events_parameters = {:name =>"Cleanup Alerts", :hawkular_environment => ENV['HAWKULAR_ENVIRONMENT'],
         :hawkular_url => "hawkular/alerts/events/delete?tags=#{alerts_tags}", :ssl=> ENV['HAWKULAR_USE_SSL'].to_bool,
         :http_method=> 'PUT', :hawkular_tenant=> ENV['HAWKULAR_TENANT'],
         :content_type => 'application/json',  :authorization => ENV['HAWKULAR_TOKEN'], :no_cache => 'no-cache' , :body => ""}

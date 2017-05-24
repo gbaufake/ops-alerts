@@ -10,7 +10,7 @@ describe "List Alerts by Type" do
   # Starting Request
   before(:all) do
 
-    parameters = {:name =>"List Alerts by Type", :hawkular_envirorment => ENV['HAWKULAR_ENVIRONMENT'],
+    parameters = {:name =>"List Alerts by Type", :hawkular_environment => ENV['HAWKULAR_ENVIRONMENT'],
       :hawkular_url => "hawkular/alerts?tags=type|*", :ssl=> ENV['HAWKULAR_USE_SSL'].to_bool,
       :http_method=> 'GET', :hawkular_tenant=> ENV['HAWKULAR_TENANT'],
       :content_type => 'application/json',  :authorization => ENV['HAWKULAR_TOKEN'], :no_cache => 'no-cache' , :body => ""}

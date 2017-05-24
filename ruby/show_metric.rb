@@ -10,7 +10,7 @@ describe "Show Metrics " do
   # Starting Request
   before(:all) do
 
-    parameters = {:name =>"Show Metrics", :hawkular_envirorment => ENV['HAWKULAR_ENVIRONMENT'],
+    parameters = {:name =>"Show Metrics", :hawkular_environment => ENV['HAWKULAR_ENVIRONMENT'],
       :hawkular_url => "hawkular/metrics/gauges/data_x/raw?start=0", :ssl=> ENV['HAWKULAR_USE_SSL'].to_bool,
       :http_method=> 'GET', :hawkular_tenant=> ENV['HAWKULAR_TENANT'],
       :content_type => 'application/json',  :authorization => ENV['HAWKULAR_TOKEN'], :no_cache => 'no-cache' , :body => ""}

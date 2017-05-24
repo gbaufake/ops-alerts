@@ -8,7 +8,7 @@ load './test_case.rb'
 describe "Pushing Triggers " do
   # Starting the resquest
   before(:all) do
-    @parameters = {:name =>"Pushing Triggers", :hawkular_envirorment => ENV['HAWKULAR_ENVIRONMENT'],
+    @parameters = {:name =>"Pushing Triggers", :hawkular_environment => ENV['HAWKULAR_ENVIRONMENT'],
       :hawkular_url => "hawkular/alerts/import/all", :ssl=> ENV['HAWKULAR_USE_SSL'].to_bool, :http_method=> 'POST',
       :hawkular_tenant=> ENV['HAWKULAR_TENANT'], :content_type => 'application/json',
       :authorization => ENV['HAWKULAR_TOKEN'], :no_cache => 'no-cache' }

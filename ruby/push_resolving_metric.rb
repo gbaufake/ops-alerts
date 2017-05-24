@@ -22,7 +22,7 @@ describe "Push Resolving Metrics " do
     value = 3
     body = "[{'timestamp': #{Time.now.to_i}, 'value': #{value} }]"
 
-    parameters = {:name =>"Push Resolving Metrics", :hawkular_envirorment => ENV['HAWKULAR_ENVIRONMENT'],
+    parameters = {:name =>"Push Resolving Metrics", :hawkular_environment => ENV['HAWKULAR_ENVIRONMENT'],
       :hawkular_url => "hawkular/metrics/gauges/data_x/raw", :ssl=> ENV['HAWKULAR_USE_SSL'].to_bool,
       :http_method=> 'POST', :hawkular_tenant=> ENV['HAWKULAR_TENANT'],
       :content_type => 'application/json',  :authorization => ENV['HAWKULAR_TOKEN'], :no_cache => 'no-cache' , :body => body}
@@ -31,7 +31,6 @@ describe "Push Resolving Metrics " do
     end
 
   it "should be 200 code of HTTP Response" do
-    byebug
     expect(@response.code).to  eq("200")
   end
 
