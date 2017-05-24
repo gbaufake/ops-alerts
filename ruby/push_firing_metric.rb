@@ -2,7 +2,7 @@ require 'byebug'
 require 'dotenv'
 require 'to_bool'
 require 'json'
-require './test_case'
+load  './test_case'
 
 
 describe "Push Fire Metrics " do

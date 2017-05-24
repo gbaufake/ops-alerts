@@ -1,9 +1,9 @@
 require 'byebug'
 require 'openSSL'
 require 'json'
-require './test_case'
 require 'dotenv'
 require 'to_bool'
+load './test_case'
 
 describe "Pushing Triggers " do
   # Starting the resquest
